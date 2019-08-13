@@ -8,3 +8,4 @@ services:
     entrypoint:
       - python
       - app.py
+    network_mode: "none"
