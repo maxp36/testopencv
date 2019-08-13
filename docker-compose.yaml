@@ -2,3 +2,9 @@ version: "3.3"
 services:
   detector:
     build: .
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    entrypoint:
+      - python
+      - app.py

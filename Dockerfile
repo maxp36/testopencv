@@ -74,10 +74,14 @@ RUN ln -s \
     /usr/local/lib/python3.7/site-packages/cv2.so
 
 
-RUN wget -O app.zip https://github.com/maxp36/testopencv/archive/master.zip \
-    && unzip app.zip \
-    && rm app.zip
+# RUN wget -O app.zip https://github.com/maxp36/testopencv/archive/master.zip \
+#     && unzip app.zip \
+#     && mv testopencv-master app \
+#     && rm app.zip
 
-WORKDIR /app
+# WORKDIR /app/app
 
-ENTRYPOINT [ "python", "app.py" ]
+# COPY app /app
+# WORKDIR /app
+
+# ENTRYPOINT [ "python", "app.py" ]
